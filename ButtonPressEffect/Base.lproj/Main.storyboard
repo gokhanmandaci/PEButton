@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qgF-Ya-csc">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Test Your Animation-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ButtonPressEffect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1Mb-P1-NbZ">
+                                <rect key="frame" x="20" y="64" width="280" height="412.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default values are assigned." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4va-sj-GLg">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZV0-I4-xgt">
+                                        <rect key="frame" x="0.0" y="26" width="280" height="32"/>
+                                        <segments>
+                                            <segment title="Press Effect Options"/>
+                                            <segment title="Animation Options"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="segOptionsAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="0FU-AM-dnr"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8jz-HT-1St">
+                                        <rect key="frame" x="0.0" y="67" width="280" height="160"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7dj-0W-KFh">
+                                                <rect key="frame" x="0.0" y="0.0" width="136" height="160"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Touch Down Duration" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="VBW-nC-YYb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="136" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Touch Up Duration" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="auf-9t-Gb9">
+                                                        <rect key="frame" x="0.0" y="42" width="136" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Touch Down Alpha" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="R5J-pw-2yR">
+                                                        <rect key="frame" x="0.0" y="84" width="136" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Touch Up Alpha" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="0kh-n1-Njj">
+                                                        <rect key="frame" x="0.0" y="126" width="136" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="54d-Kw-bFv">
+                                                <rect key="frame" x="144" y="0.0" width="136" height="160"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Touch Down ScaleX" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="cQW-c5-Ocy">
+                                                        <rect key="frame" x="0.0" y="0.0" width="136" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Touch Down ScaleY" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="qsc-2J-8Mb">
+                                                        <rect key="frame" x="0.0" y="42" width="136" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Touch Up ScaleX" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="nnS-k0-KPt">
+                                                        <rect key="frame" x="0.0" y="84" width="136" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Touch Up ScaleY" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="iBC-86-CW4">
+                                                        <rect key="frame" x="0.0" y="126" width="136" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dFq-u5-sjE">
+                                        <rect key="frame" x="0.0" y="232" width="280" height="24"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CTw-AD-HWb">
+                                                <rect key="frame" x="0.0" y="0.0" width="136" height="24"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Touch Down Delay" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="7yc-ZY-49A">
+                                                        <rect key="frame" x="0.0" y="0.0" width="136" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Touch Up Delay" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="h91-uN-bOO">
+                                                        <rect key="frame" x="0.0" y="8" width="136" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Touch Down Spring" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="K2H-u7-jE0">
+                                                        <rect key="frame" x="0.0" y="16" width="136" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Touch Up Spring" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="WAt-Sd-yke">
+                                                        <rect key="frame" x="0.0" y="24" width="136" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UAm-Ei-hUu">
+                                                <rect key="frame" x="144" y="0.0" width="136" height="24"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Touch Down Velocity" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="cjP-N8-ita">
+                                                        <rect key="frame" x="0.0" y="0.0" width="136" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Touch Up Velocity" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="eqH-JT-wrv">
+                                                        <rect key="frame" x="0.0" y="8" width="136" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGH-y0-PCC">
+                                                        <rect key="frame" x="0.0" y="16" width="136" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <state key="normal" title="Touch Down Options"/>
+                                                        <connections>
+                                                            <action selector="btnTouchDownOptionsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nJU-ri-IpT"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQl-tq-weU">
+                                                        <rect key="frame" x="0.0" y="24" width="136" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <state key="normal" title="Touch Up Options"/>
+                                                        <connections>
+                                                            <action selector="btnTouchUpOptionsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P4w-w5-huj"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HOm-M3-fAm">
+                                        <rect key="frame" x="0.0" y="237" width="280" height="33.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set animation on view" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LgR-ut-NTc">
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="33.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="F74-Md-Xpr">
+                                                <rect key="frame" x="231" y="1.5" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="sldOnViewAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="eJt-y6-d51"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDr-3C-qg1">
+                                        <rect key="frame" x="0.0" y="280.5" width="280" height="30"/>
+                                        <state key="normal" title="Set Press Effect Parameters"/>
+                                        <connections>
+                                            <action selector="setConfigParametersAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FuR-ZJ-Yqu"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dLQ-Zj-tGA">
+                                        <rect key="frame" x="0.0" y="320.5" width="280" height="17"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test animations by pressing button." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hO-xQ-UQB">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="l7S-ng-R2Z">
+                                        <rect key="frame" x="0.0" y="347.5" width="280" height="65"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IMx-sh-DN6">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="65"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFi-kw-hmZ">
+                                                        <rect key="frame" x="45" y="22.5" width="40" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="IMx-sh-DN6" secondAttribute="height" multiplier="2:1" id="5db-S6-aFL"/>
+                                                    <constraint firstItem="PFi-kw-hmZ" firstAttribute="centerY" secondItem="IMx-sh-DN6" secondAttribute="centerY" id="WiZ-oa-zIG"/>
+                                                    <constraint firstItem="PFi-kw-hmZ" firstAttribute="centerX" secondItem="IMx-sh-DN6" secondAttribute="centerX" id="Xks-d8-0VX"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAT-8G-Hdq" customClass="PEButton" customModule="ButtonPressEffect" customModuleProvider="target">
+                                                <rect key="frame" x="150" y="0.0" width="130" height="65"/>
+                                                <color key="backgroundColor" red="0.92941176469999998" green="0.29411764709999999" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnTestAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rUc-Db-BoR"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1Mb-P1-NbZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="O2S-hx-jBa"/>
+                            <constraint firstItem="1Mb-P1-NbZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="PWB-0c-Nw3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Mb-P1-NbZ" secondAttribute="trailing" constant="20" id="mTT-a1-ciX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Test Your Animation" id="5Ol-Bc-Lsb"/>
+                    <connections>
+                        <outlet property="btnSetParameters" destination="VDr-3C-qg1" id="eED-yU-VaI"/>
+                        <outlet property="btnTest" destination="NAT-8G-Hdq" id="R96-Fq-5K4"/>
+                        <outlet property="btnTouchDownOptions" destination="QGH-y0-PCC" id="SRY-2b-geE"/>
+                        <outlet property="btnTouchUpOptions" destination="IQl-tq-weU" id="GMT-hW-Ga2"/>
+                        <outlet property="segOptions" destination="ZV0-I4-xgt" id="Bsy-MS-7dc"/>
+                        <outlet property="sldOnView" destination="F74-Md-Xpr" id="gQn-BD-jVa"/>
+                        <outlet property="stkAnimationParams" destination="dFq-u5-sjE" id="rZv-Az-Be1"/>
+                        <outlet property="stkPressEffectParams" destination="8jz-HT-1St" id="y4s-px-EDG"/>
+                        <outlet property="txtTouchDownAlpha" destination="R5J-pw-2yR" id="DET-sR-R03"/>
+                        <outlet property="txtTouchDownDelay" destination="7yc-ZY-49A" id="9Fv-Xp-dYG"/>
+                        <outlet property="txtTouchDownDuration" destination="VBW-nC-YYb" id="qm6-0c-Niw"/>
+                        <outlet property="txtTouchDownInitialSpringVelocity" destination="cjP-N8-ita" id="igm-6Q-nZ0"/>
+                        <outlet property="txtTouchDownScaleX" destination="cQW-c5-Ocy" id="ua1-lg-y8L"/>
+                        <outlet property="txtTouchDownScaleY" destination="qsc-2J-8Mb" id="KVi-Qb-F7I"/>
+                        <outlet property="txtTouchDownUsingSpringWithDamping" destination="K2H-u7-jE0" id="5B4-5V-nke"/>
+                        <outlet property="txtTouchUpAlpha" destination="0kh-n1-Njj" id="3HT-yf-QOI"/>
+                        <outlet property="txtTouchUpDelay" destination="h91-uN-bOO" id="vwz-bh-b0T"/>
+                        <outlet property="txtTouchUpDuration" destination="auf-9t-Gb9" id="ud8-qs-Hsu"/>
+                        <outlet property="txtTouchUpInitialSpringVelocity" destination="eqH-JT-wrv" id="4ps-Lu-yjt"/>
+                        <outlet property="txtTouchUpScaleX" destination="nnS-k0-KPt" id="Kv9-PI-C6R"/>
+                        <outlet property="txtTouchUpScaleY" destination="iBC-86-CW4" id="W7w-i4-hOd"/>
+                        <outlet property="txtTouchUpUsingSpringWithDamping" destination="WAt-Sd-yke" id="kwx-KR-52B"/>
+                        <outlet property="vwTest" destination="IMx-sh-DN6" id="bYl-zD-cIx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="88.392857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TB2-lQ-WsJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qgF-Ya-csc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3VR-Tj-Yic">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5MQ-sm-8yg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rX2-lz-5m9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
