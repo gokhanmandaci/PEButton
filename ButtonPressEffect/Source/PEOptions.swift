@@ -13,13 +13,13 @@ struct PEOptions {
     /// Duration of up scale animation. Default value = 0.1
     var touchUpDuration: TimeInterval = 0.1
     
-    /// Scale factor for X axis. Touch Down
+    /// Scale factor for X axis. Touch Down. Default 0.9
     var touchDownScaleX: CGFloat = 0.9
-    /// Scale factor for Y axis. Touch Down
+    /// Scale factor for Y axis. Touch Down. Default 0.9
     var touchDownScaleY: CGFloat = 0.9
-    /// Scale factor for X axis. Touch Up
+    /// Scale factor for X axis. Touch Up. Default 0.9
     var touchUpScaleX: CGFloat?
-    /// Scale factor for Y axis. Touch Up
+    /// Scale factor for Y axis. Touch Up. Default 0.9
     var touchUpScaleY: CGFloat?
     
     /// Touch down alpha value. Default 0.8
