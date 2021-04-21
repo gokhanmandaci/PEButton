@@ -122,68 +122,68 @@ extension ViewController {
     private func setPressEffectParameters() {
         if let tdDuration = txtTouchDownDuration.text,
            !tdDuration.isEmpty {
-            touchDownDuration = Double(tdDuration) ?? 0.1
+            touchDownDuration = Double(tdDuration.replacingOccurrences(of: ",", with: ".")) ?? 0.1
         }
         if let tuDuration = txtTouchUpDuration.text,
            !tuDuration.isEmpty {
-            touchUpDuration = Double(tuDuration) ?? 0.1
+            touchUpDuration = Double(tuDuration.replacingOccurrences(of: ",", with: ".")) ?? 0.1
         }
         if let tdScaleX = txtTouchDownScaleX.text,
            !tdScaleX.isEmpty {
-            touchDownScaleX = CGFloat(Double(tdScaleX) ?? 0.9)
+            touchDownScaleX = CGFloat(Double(tdScaleX.replacingOccurrences(of: ",", with: ".")) ?? 0.9)
         }
         if let tdScaleY = txtTouchDownScaleY.text,
            !tdScaleY.isEmpty {
-            touchDownScaleY = CGFloat(Double(tdScaleY) ?? 0.9)
+            touchDownScaleY = CGFloat(Double(tdScaleY.replacingOccurrences(of: ",", with: ".")) ?? 0.9)
         }
         if let tuScaleX = txtTouchUpScaleX.text,
            !tuScaleX.isEmpty {
-            touchUpScaleX = CGFloat(Double(tuScaleX) ?? 1)
+            touchUpScaleX = CGFloat(Double(tuScaleX.replacingOccurrences(of: ",", with: ".")) ?? 1)
         } else {
             // touchUpScaleX can be nil which will works as transform .identity
             touchUpScaleX = nil
         }
         if let tuScaleY = txtTouchUpScaleY.text,
            !tuScaleY.isEmpty {
-            touchUpScaleY = CGFloat(Double(tuScaleY) ?? 1)
+            touchUpScaleY = CGFloat(Double(tuScaleY.replacingOccurrences(of: ",", with: ".")) ?? 1)
         } else {
             // touchUpScaleY can be nil which will works as transform .identity
             touchUpScaleY = nil
         }
         if let tdAlpha = txtTouchDownAlpha.text,
            !tdAlpha.isEmpty {
-            touchDownAlpha = CGFloat(Double(tdAlpha) ?? 0.8)
+            touchDownAlpha = CGFloat(Double(tdAlpha.replacingOccurrences(of: ",", with: ".")) ?? 0.8)
         }
         if let tuAlpha = txtTouchUpAlpha.text,
            !tuAlpha.isEmpty {
-            touchUpAlpha = CGFloat(Double(tuAlpha) ?? 1)
+            touchUpAlpha = CGFloat(Double(tuAlpha.replacingOccurrences(of: ",", with: ".")) ?? 1)
         }
     }
     
     private func setAnimationParameters() {
         if let tdDelay = txtTouchDownDelay.text,
            !tdDelay.isEmpty {
-            touchDownDelay = Double(tdDelay) ?? 0.0
+            touchDownDelay = Double(tdDelay.replacingOccurrences(of: ",", with: ".")) ?? 0.0
         }
         if let tuDelay = txtTouchUpDelay.text,
            !tuDelay.isEmpty {
-            touchUpDelay = Double(tuDelay) ?? 0.0
+            touchUpDelay = Double(tuDelay.replacingOccurrences(of: ",", with: ".")) ?? 0.0
         }
         if let tdSpring = txtTouchDownUsingSpringWithDamping.text,
            !tdSpring.isEmpty {
-            touchDownUsingSpringWithDamping = CGFloat(Double(tdSpring) ?? 1.0)
+            touchDownUsingSpringWithDamping = CGFloat(Double(tdSpring.replacingOccurrences(of: ",", with: ".")) ?? 1.0)
         }
         if let tuSpring = txtTouchUpUsingSpringWithDamping.text,
            !tuSpring.isEmpty {
-            touchUpUsingSpringWithDamping = CGFloat(Double(tuSpring) ?? 1.0)
+            touchUpUsingSpringWithDamping = CGFloat(Double(tuSpring.replacingOccurrences(of: ",", with: ".")) ?? 1.0)
         }
         if let tdVelocity = txtTouchDownInitialSpringVelocity.text,
            !tdVelocity.isEmpty {
-            touchDownInitialSpringVelocity = CGFloat(Double(tdVelocity) ?? 1.0)
+            touchDownInitialSpringVelocity = CGFloat(Double(tdVelocity.replacingOccurrences(of: ",", with: ".")) ?? 1.0)
         }
         if let tuVelocity = txtTouchUpInitialSpringVelocity.text,
            !tuVelocity.isEmpty {
-            touchUpInitialSpringVelocity = CGFloat(Double(tuVelocity) ?? 1.0)
+            touchUpInitialSpringVelocity = CGFloat(Double(tuVelocity.replacingOccurrences(of: ",", with: ".")) ?? 1.0)
         }
     }
     
@@ -257,7 +257,7 @@ extension ViewController {
         picker = UIPickerView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 250))
         picker!.delegate = self
         picker!.dataSource = self
-        picker!.backgroundColor = .white
+        picker!.backgroundColor = .blue
         view.addSubview(picker!)
     }
 }
